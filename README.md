@@ -20,7 +20,7 @@ or change directory and run on Terminal:
 # Data
 No MNIST or CIFAR-10. 
 
-This is a repository containing datasets of 5200 training images and 1267 testing images.No problematic image.
+This is a repository containing datasets of 5200 training images of 4 classes and 1267 testing images.No problematic image.
 
 Download dataset from [here](
 https://www.dropbox.com/s/30n7ge8dxhs3doi/multiclass_datasets.rar?dl=0). It is 67 MB.
@@ -32,10 +32,10 @@ test_data_bi.npy is containing 1267 testing photos with labels.
 
 Classes are table & glass.
 
-Classes are equal(1300 glass - 3200 table). 
+Classes are equal(1300 glass - 1300 kitchen - 1300 knife- 1300 saucepan) on training data. 
 
 # CPU or GPU
-I trained on GTX 1050. 1 epoch lasted 4-5 minutes approximately.
+I trained on GTX 1050. 1 epoch lasted 2 minutes approximately.
 
 If you are using CPU, which I do not recommend, change the lines below:
 ```
@@ -55,7 +55,7 @@ with tf.Session() as sess
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/multiclass_architecture_TensorFlow.png) 
 
 # Results
-Accuracy score reached 90 percent on CV after 60 epochs.
+Accuracy score reached 65 percent on CV after 60 epochs.
 
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_accuracy.png)
 
