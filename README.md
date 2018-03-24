@@ -25,7 +25,7 @@ This is a repository containing datasets of 5200 training images of 4 classes an
 Download dataset from [here](
 https://www.dropbox.com/s/30n7ge8dxhs3doi/multiclass_datasets.rar?dl=0). It is 67 MB.
 
-Extract files from datasets.rar. Then put it in TensorFlow-Multiclass-Image-Classification-using-CNN-s folder.
+Extract files from multiclass_datasets.rar. Then put it in TensorFlow-Multiclass-Image-Classification-using-CNN-s folder.
 train_data_bi.npy is containing training photos with labels.
 
 test_data_bi.npy is containing 1267 testing photos with labels.
@@ -55,7 +55,7 @@ with tf.Session() as sess
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/multiclass_architecture_TensorFlow.png) 
 
 # Results
-Accuracy score reached 65 percent on CV after 60 epochs.
+Accuracy score reached 65 percent on CV after 60 epochs. Test score is around 63 %.
 
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_accuracy.png)
 
