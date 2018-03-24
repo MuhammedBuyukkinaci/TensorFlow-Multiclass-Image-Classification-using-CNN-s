@@ -30,7 +30,7 @@ train_data_bi.npy is containing training photos with labels.
 
 test_data_bi.npy is containing 1267 testing photos with labels.
 
-Classes are table & glass.
+Classes are chair & kitchen & knife & saucepan.
 
 Classes are equal(1300 glass - 1300 kitchen - 1300 knife- 1300 saucepan) on training data. 
 
