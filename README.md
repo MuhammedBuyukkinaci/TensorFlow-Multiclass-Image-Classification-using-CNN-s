@@ -18,7 +18,7 @@ or change directory and run on Terminal:
 ```jupyter lab ``` or ```jupyter notebook ```
 
 # Data
-No MNIST or CIFAR-10.
+No MNIST or CIFAR-10. 
 
 This is a repository containing datasets of 5200 training images and 1267 testing images.No problematic image.
 
