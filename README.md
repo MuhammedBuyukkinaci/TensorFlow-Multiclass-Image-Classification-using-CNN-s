@@ -52,7 +52,7 @@ with tf.Session() as sess
 
 1 input layer, 4 convolution layer, 4 pooling layer, 4 fully connected layer, 4 dropout layer, 1 output layer with 4 nodes for each class. The architecture used is below.
 
-![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/multiclass_architecture.png) 
+![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/multiclass_architecture_TensorFlow.png) 
 
 # Results
 Accuracy score reached 90 percent on CV after 60 epochs.
