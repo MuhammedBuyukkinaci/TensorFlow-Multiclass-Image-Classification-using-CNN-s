@@ -13,11 +13,11 @@ or
 # Training
 Training on GPU:
 
-```python multiclass_classifcation_gpu.py ```
+```python multiclass_classification_gpu.py ```
 
 Training on CPU:
 
-```python multiclass_classifcation_cpu.py ```
+```python multiclass_classification_cpu.py ```
 
 or change directory and run on Terminal:
 
