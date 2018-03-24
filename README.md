@@ -52,7 +52,7 @@ with tf.Session(config=config) as sess:
 ```
 to
 ```
-with tf.Session() as sess
+with tf.Session() as sess:
 ```
 # Architecture
 
