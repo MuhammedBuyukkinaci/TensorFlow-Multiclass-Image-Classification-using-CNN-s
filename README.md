@@ -28,7 +28,7 @@ https://www.dropbox.com/s/30n7ge8dxhs3doi/multiclass_datasets.rar?dl=0). It is 6
 Extract files from datasets.rar. Then put it in TensorFlow-Multiclass-Image-Classification-using-CNN-s folder.
 train_data_bi.npy is containing training photos with labels.
 
-test_data_bi.npy is containing 1243 testing photos with labels.
+test_data_bi.npy is containing 1267 testing photos with labels.
 
 Classes are table & glass.
 
@@ -55,7 +55,7 @@ with tf.Session() as sess
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/multiclass_architecture.png) 
 
 # Results
-Accuracy score reached 90 percent on CV after 50 epochs.
+Accuracy score reached 90 percent on CV after 60 epochs.
 
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Image-Classification-Convolutional-Neural-Networks/blob/master/accuracy.png)
 
