@@ -11,7 +11,13 @@ or
 ```pip3 install -r requirements.txt```
 
 # Training
-```python multiclass_classifcation.py ```
+Training on GPU:
+
+```python multiclass_classifcation_gpu.py ```
+
+Training on CPU:
+
+```python multiclass_classifcation_cpu.py ```
 
 or change directory and run on Terminal:
 
