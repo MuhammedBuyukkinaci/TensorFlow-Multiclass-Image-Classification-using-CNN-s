@@ -70,3 +70,7 @@ Cross entropy loss is plotted below.
 
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_cv.png)
 
+# Predictions
+Predictions for first 64 testing images are below. Titles are  the predictions of our Model.
+
+![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_preds.png)
