@@ -19,7 +19,8 @@ Training on CPU:
 
 ```python multiclass_classification_cpu.py ```
 
-or change directory and run on Terminal:
+# Notebook
+Download .ipynb file from [here](https://github.com/MuhammedBuyukkinaci/My-Jupyter-Files-1/blob/master/Multiclass_CNN.ipynb) and run
 
 ```jupyter lab ``` or ```jupyter notebook ```
 
