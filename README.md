@@ -58,9 +58,8 @@ with tf.Session() as sess:
 ```
 # Architecture
 
-1 input layer, 4 convolution layer, 4 pooling layer, 4 fully connected layer, 4 dropout layer, 1 output layer with 4 nodes for each class. The architecture used is below.
-
-![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/multiclass_architecture_TensorFlow.png) 
+AlexNet is used as architecture. 5 convolution layers and 3 Fully Connected Layers with 0.5 Dropout Ratio. 60 million Parameters.
+![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Image-Classification-Convolutional-Neural-Networks/blob/master/alexnet_architecture.png) 
 
 # Results
 Accuracy score reached 65 percent on CV after 60 epochs. Test score is around 63 %.
