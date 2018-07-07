@@ -62,13 +62,8 @@ AlexNet is used as architecture. 5 convolution layers and 3 Fully Connected Laye
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Image-Classification-Convolutional-Neural-Networks/blob/master/alexnet_architecture.png) 
 
 # Results
-Accuracy score reached 65 percent on CV after 60 epochs. Test score is around 63 %.
-
-![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_accuracy.png)
-
-Cross entropy loss is plotted below.
-
-![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_cv.png)
+Accuracy score reached 65 percent on CV after 30 epochs. Test accuracy is around 88%.
+![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_results.png)
 
 # Predictions
 Predictions for first 64 testing images are below. Titles are  the predictions of our Model.
