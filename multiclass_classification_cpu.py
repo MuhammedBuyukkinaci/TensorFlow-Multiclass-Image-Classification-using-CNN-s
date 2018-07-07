@@ -43,10 +43,10 @@ test_data = np.load('test_data_mc.npy')
 
 #In order to implement ALEXNET, we are resizing them to (227,227,3)
 for i in range(len(train_data)):
-	train_data[i][0] = cv2.resize(train_data[i][0],(IMG_SIZE_ALEXNET,IMG_SIZE_ALEXNET))
+    train_data[i][0] = cv2.resize(train_data[i][0],(IMG_SIZE_ALEXNET,IMG_SIZE_ALEXNET))
 
 for i in range(len(test_data)):
-	test_data[i][0] = cv2.resize(test_data[i][0],(IMG_SIZE_ALEXNET,IMG_SIZE_ALEXNET))
+    test_data[i][0] = cv2.resize(test_data[i][0],(IMG_SIZE_ALEXNET,IMG_SIZE_ALEXNET))
 
 train = train_data[:4800]
 cv = train_data[4800:]
