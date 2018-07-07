@@ -29,7 +29,7 @@ No MNIST or CIFAR-10.
 
 This is a repository containing datasets of 5200 training images of 4 classes and 1267 testing images.No problematic image.
 
-Extract files from multiclass_datasets.rar. Then put it in TensorFlow-Multiclass-Image-Classification-using-CNN-s folder.
+Just extract files from multiclass_datasets.rar.
 
 train_data_bi.npy is containing 5200 training photos with labels.
 
