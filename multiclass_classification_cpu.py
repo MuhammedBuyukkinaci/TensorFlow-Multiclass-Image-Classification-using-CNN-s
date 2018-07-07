@@ -241,12 +241,9 @@ with tf.Session() as sess:
         cv_acc_list = []
         cv_loss_list = []
         for v in range(0,len(cv_x)-int(len(cv_x) % validating_size),validating_size):
-            acc_on_cv,loss_on_cv,preds = sess.run([acc,cross_entropy,tf.nn.softmax(y_pred)],\
-																							feed_dict=\
-                                                                                            {x:cv_x[v:v+validating_size] ,\
-                                                                                            y_true:cv_y[v:v+validating_size] ,\
-                                                                                            hold_prob1:1.0,\
-                                                                                            hold_prob2:1.0})
+            acc_on_cv,loss_on_cv,preds = sess.run([acc,cross_entropy,tf.nn.softmax(y_pred)],
+			feed_dict={x:cv_x[v:v+validating_size] ,y_true:cv_y[v:v+validating_size] ,hold_prob1:1.0,hold_prob2:1.0})
+			
             auc_on_cv = roc_auc_score(cv_y[v:v+validating_size],preds)
             cv_acc_list.append(acc_on_cv)
             cv_auc_list.append(auc_on_cv)

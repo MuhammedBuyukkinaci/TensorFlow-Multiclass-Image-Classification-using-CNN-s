@@ -243,11 +243,9 @@ with tf.Session(config=config) as sess:
         cv_acc_list = []
         cv_loss_list = []
         for v in range(0,len(cv_x)-int(len(cv_x) % validating_size),validating_size):
-            acc_on_cv,loss_on_cv,preds = sess.run([acc,cross_entropy,tf.nn.softmax(y_pred)],feed_dict=
-                                                                                            {x:cv_x[v:v+validating_size] ,
-                                                                                            y_true:cv_y[v:v+validating_size] ,
-                                                                                            hold_prob1:1.0,
-                                                                                            hold_prob2:1.0})
+            acc_on_cv,loss_on_cv,preds = sess.run([acc,cross_entropy,tf.nn.softmax(y_pred)],
+			feed_dict={x:cv_x[v:v+validating_size] ,y_true:cv_y[v:v+validating_size] ,hold_prob1:1.0,hold_prob2:1.0})
+			
             auc_on_cv = roc_auc_score(cv_y[v:v+validating_size],preds)
             cv_acc_list.append(acc_on_cv)
             cv_auc_list.append(auc_on_cv)
@@ -264,11 +262,8 @@ with tf.Session(config=config) as sess:
     test_acc_list = []
     test_loss_list = []
     for v in range(0,len(test_x)-int(len(test_x) % validating_size),validating_size):
-        acc_on_test,loss_on_test,preds = sess.run([acc,cross_entropy,tf.nn.softmax(y_pred)],feed_dict=\
-																						{x:test_x[v:v+validating_size] ,\
-																						y_true:test_y[v:v+validating_size] ,\
-																						hold_prob1:1.0,\
-																						hold_prob2:1.0})
+        acc_on_test,loss_on_test,preds = sess.run([acc,cross_entropy,tf.nn.softmax(y_pred)],
+		feed_dict={x:test_x[v:v+validating_size] ,y_true:test_y[v:v+validating_size] ,hold_prob1:1.0,hold_prob2:1.0})
         
         auc_on_test = roc_auc_score(test_y[v:v+validating_size],preds)
         test_acc_list.append(acc_on_test)
