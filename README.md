@@ -29,21 +29,17 @@ No MNIST or CIFAR-10.
 
 This is a repository containing datasets of 5200 training images of 4 classes and 1267 testing images.No problematic image.
 
-Download .rar extension version from [here](
-https://www.dropbox.com/s/30n7ge8dxhs3doi/multiclass_datasets.rar?dl=0) or .zip extension version from [here](
-https://www.dropbox.com/s/20jkiactn0k5sss/multiclass_datasets_zip.zip?dl=0). It is 67 MB.
-
 Extract files from multiclass_datasets.rar. Then put it in TensorFlow-Multiclass-Image-Classification-using-CNN-s folder.
-train_data_bi.npy is containing training photos with labels.
+
+train_data_bi.npy is containing 5200 training photos with labels.
 
 test_data_bi.npy is containing 1267 testing photos with labels.
 
-Classes are chair & kitchen & knife & saucepan.
+Classes are chair & kitchen & knife & saucepan. Classes are equal(1300 glass - 1300 kitchen - 1300 knife- 1300 saucepan) on training data. 
 
-Classes are equal(1300 glass - 1300 kitchen - 1300 knife- 1300 saucepan) on training data. 
-
+Download pure data from [here](https://www.kaggle.com/mbkinaci/chair-kitchen-knife-saucepan). Warning 962 MB.
 # CPU or GPU
-I trained on GTX 1050. 1 epoch lasted 45 seconds approximately.
+I trained on GTX 1050. 1 epoch lasted 35 seconds approximately.
 
 If you are using CPU, which I do not recommend, change the lines below:
 ```
