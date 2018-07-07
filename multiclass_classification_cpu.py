@@ -233,7 +233,7 @@ with tf.Session() as sess:
         for j in range(0,steps-remaining,step_size):
             #Feeding step_size-amount data with 0.5 keeping probabilities on DROPOUT LAYERS
             _,c = sess.run([train,cross_entropy],
-						feed_dict={x:X[j:j+step_size] , y_true:Y[j:j+step_size],hold_prob1:0.5,hold_prob2:0.5})
+			feed_dict={x:X[j:j+step_size] , y_true:Y[j:j+step_size],hold_prob1:0.5,hold_prob2:0.5})
         
         
 		#Writing for loop to calculate test statistics. GTX 1050 isn't able to calculate all test data.
