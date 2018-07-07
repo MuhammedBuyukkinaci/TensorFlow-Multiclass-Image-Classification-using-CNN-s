@@ -43,7 +43,7 @@ Classes are chair & kitchen & knife & saucepan.
 Classes are equal(1300 glass - 1300 kitchen - 1300 knife- 1300 saucepan) on training data. 
 
 # CPU or GPU
-I trained on GTX 1050. 1 epoch lasted 2 minutes approximately.
+I trained on GTX 1050. 1 epoch lasted 45 seconds approximately.
 
 If you are using CPU, which I do not recommend, change the lines below:
 ```
@@ -62,7 +62,7 @@ AlexNet is used as architecture. 5 convolution layers and 3 Fully Connected Laye
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Image-Classification-Convolutional-Neural-Networks/blob/master/alexnet_architecture.png) 
 
 # Results
-Accuracy score reached 65 percent on CV after 30 epochs. Test accuracy is around 88%.
+Accuracy score reached 89% on CV after 30 epochs. Test accuracy is around 88%.
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_results.png)
 
 # Predictions
