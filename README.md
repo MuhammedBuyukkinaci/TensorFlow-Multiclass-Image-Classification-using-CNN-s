@@ -13,11 +13,11 @@ or
 # Training
 Training on GPU:
 
-```python multiclass_classification_gpu.py ```
+```python3 multiclass_classification_gpu.py ```
 
 Training on CPU:
 
-```python multiclass_classification_cpu.py ```
+```python3 multiclass_classification_cpu.py ```
 
 # Notebook
 Download .ipynb file from [here](https://github.com/MuhammedBuyukkinaci/My-Jupyter-Files-1/blob/master/Multiclass_CNN.ipynb) and run
