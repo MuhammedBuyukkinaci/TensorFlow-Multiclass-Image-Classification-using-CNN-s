@@ -36,27 +36,13 @@ Classes are chair & kitchen & knife & saucepan. Classes are equal(1300 glass - 1
 
 Download pure data from [here](https://www.kaggle.com/mbkinaci/chair-kitchen-knife-saucepan). Warning 962 MB.
 
-# CPU or GPU
-I trained on GTX 1050. 1 epoch lasted 35 seconds approximately.
-
-If you are using CPU, which I do not recommend, change the lines below:
-```
-config = tf.ConfigProto(allow_soft_placement=True)
-config.gpu_options.allow_growth = True
-config.gpu_options.allocator_type = 'BFC'
-with tf.Session(config=config) as sess:
-```
-to
-```
-with tf.Session() as sess:
-```
 # Architecture
 
 AlexNet is used as architecture. 5 convolution layers and 3 Fully Connected Layers with 0.5 Dropout Ratio. 60 million Parameters.
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Image-Classification-Convolutional-Neural-Networks/blob/master/alexnet_architecture.png) 
 
 # Results
-Accuracy score reached 89% on CV after 30 epochs. Test accuracy is around 88%.
+Accuracy score reached 87% on CV after just 5 epochs.
 ![alt text](https://github.com/MuhammedBuyukkinaci/TensorFlow-Multiclass-Image-Classification-using-CNN-s/blob/master/mc_results.png)
 
 # Predictions
