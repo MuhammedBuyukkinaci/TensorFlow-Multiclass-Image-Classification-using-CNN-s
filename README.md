@@ -1,12 +1,10 @@
 # TensorFlow-Multiclass-Image-Classification-using-CNN-s
 This is a multiclass image classification project using Convolutional Neural Networks and TensorFlow API (no Keras) on Python.
 
+It is a ready-to-run code.
+
 [Read all story in Turkish](https://medium.com/@mubuyuk51/tensorflow-ile-%C3%A7ok-s%C4%B1n%C4%B1fl%C4%B1-multi-class-resim-s%C4%B1n%C4%B1fland%C4%B1rma-f56c3605aff6).
 # Dependencies
-
-```pip install -r requirements.txt```
-
-or
 
 ```pip3 install -r requirements.txt```
 
@@ -20,9 +18,8 @@ Training on CPU:
 ```python3 multiclass_classification_cpu.py ```
 
 # Notebook
-Download .ipynb file from [here](https://github.com/MuhammedBuyukkinaci/My-Jupyter-Files-1/blob/master/Multiclass_CNN.ipynb) and run
 
-```jupyter lab ``` or ```jupyter notebook ```
+```jupyter lab  Multiclass_classification.ipynb``` or ```jupyter notebook Multiclass_classification.ipynb ```
 
 # Data
 No MNIST or CIFAR-10. 
@@ -38,6 +35,7 @@ test_data_bi.npy is containing 1267 testing photos with labels.
 Classes are chair & kitchen & knife & saucepan. Classes are equal(1300 glass - 1300 kitchen - 1300 knife- 1300 saucepan) on training data. 
 
 Download pure data from [here](https://www.kaggle.com/mbkinaci/chair-kitchen-knife-saucepan). Warning 962 MB.
+
 # CPU or GPU
 I trained on GTX 1050. 1 epoch lasted 35 seconds approximately.
 

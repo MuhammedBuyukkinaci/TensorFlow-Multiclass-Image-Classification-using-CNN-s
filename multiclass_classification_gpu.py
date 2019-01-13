@@ -12,7 +12,8 @@ from sklearn.metrics import roc_auc_score
 import matplotlib.pyplot as plt # for visualizations
 import tensorflow as tf # For tensor operations
 import pandas as pd # for manipulating data
-#If you are using CPU in a computer having GPU, the line below should be in your code.
+import zipfile
+import os, sys
 
 #HYPERPARAMETERS
 # our photos are in the size of (80,80,3)
@@ -29,16 +30,16 @@ output_classes = 4
 TRAIN_DIR = os.getcwd()
 
 #Current working directory
-import os, sys
+
 print(TRAIN_DIR) # current working directory
 
-#If you already have the loaded data use: test_data = train_data = np.load('train_data_bi.npy'), otherwise use train_data = create_train_data()
-#train_data = create_train_data()
-train_data = np.load('train_data_mc.npy')
+#Unzipping file
+with zipfile.ZipFile("datasets.zip","r") as zip_ref:
+    zip_ref.extractall()
 
-#If you already have the loaded data use: test_data = np.load('test_data_bi.npy'), otherwise otherwise use train_data = create_train_data()
-#test_data = process_test_data()
-test_data = np.load('test_data_mc.npy')
+#Reading .npy files
+train_data = np.load(os.path.join(os.getcwd(), 'datasets' ,'train_data_mc.npy'))
+test_data = np.load(os.path.join(os.getcwd(), 'datasets' ,'test_data_mc.npy'))
 
 #In order to implement ALEXNET, we are resizing them to (227,227,3)
 for i in range(len(train_data)):
@@ -284,7 +285,7 @@ pd.Series(auc_list).plot(kind='line',figsize=(12,7),title='AUC on CV data',ax=ax
 plt.subplots_adjust(wspace=0.8)
 ax[0].set_title('Accuracy on CV data')
 ax[1].set_title('Loss on CV data')
-ax[2].set_title('Loss on CV data')
+ax[2].set_title('AUC on CV data')
 plt.show()
 
 

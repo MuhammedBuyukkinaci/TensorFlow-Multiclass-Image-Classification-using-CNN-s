@@ -12,14 +12,22 @@ from sklearn.metrics import roc_auc_score
 import matplotlib.pyplot as plt # for visualizations
 import tensorflow as tf # For tensor operations
 import pandas as pd # for manipulating data
-#If you are using CPU in a computer having GPU, the line below should be in your code.
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+import zipfile
+import os, sys
+
+#Switching to CPU
+if tf.test.gpu_device_name():
+    print("GPU isn't gonna be used even if you have")
+    os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+else:
+    print("No GPU Found")
+    print("CPU is gonna be used")
 
 #HYPERPARAMETERS
 # our photos are in the size of (80,80,3)
 IMG_SIZE = 80
 
-epochs = 3
+epochs = 30
 step_size = 8
 IMG_SIZE_ALEXNET = 227
 validating_size = 40
@@ -30,16 +38,16 @@ output_classes = 4
 TRAIN_DIR = os.getcwd()
 
 #Current working directory
-import os, sys
+
 print(TRAIN_DIR) # current working directory
 
-#If you already have the loaded data use: test_data = train_data = np.load('train_data_bi.npy'), otherwise use train_data = create_train_data()
-#train_data = create_train_data()
-train_data = np.load('train_data_mc.npy')
+#Unzipping file
+with zipfile.ZipFile("datasets.zip","r") as zip_ref:
+    zip_ref.extractall()
 
-#If you already have the loaded data use: test_data = np.load('test_data_bi.npy'), otherwise otherwise use train_data = create_train_data()
-#test_data = process_test_data()
-test_data = np.load('test_data_mc.npy')
+#Reading .npy files
+train_data = np.load(os.path.join(os.getcwd(), 'datasets' ,'train_data_mc.npy'))
+test_data = np.load(os.path.join(os.getcwd(), 'datasets' ,'test_data_mc.npy'))
 
 #In order to implement ALEXNET, we are resizing them to (227,227,3)
 for i in range(len(train_data)):
@@ -56,7 +64,6 @@ Y = np.array([i[1] for i in train])
 
 cv_x = np.array([i[0] for i in cv]).reshape(-1,IMG_SIZE_ALEXNET,IMG_SIZE_ALEXNET,3)
 cv_y = np.array([i[1] for i in cv])
-
 test_x = np.array([i[0] for i in test_data]).reshape(-1,IMG_SIZE_ALEXNET,IMG_SIZE_ALEXNET,3)
 test_y = np.array([i[1] for i in test_data])
 
@@ -227,7 +234,8 @@ auc_list = []
 loss_list = []
 saver = tf.train.Saver()
 
-with tf.Session() as sess:
+config = tf.ConfigProto(device_count = {'GPU': 0})
+with tf.Session(config=config) as sess:
     sess.run(init)
     for i in range(epochs):
         for j in range(0,steps-remaining,step_size):
@@ -285,7 +293,7 @@ pd.Series(auc_list).plot(kind='line',figsize=(12,7),title='AUC on CV data',ax=ax
 plt.subplots_adjust(wspace=0.8)
 ax[0].set_title('Accuracy on CV data')
 ax[1].set_title('Loss on CV data')
-ax[2].set_title('Loss on CV data')
+ax[2].set_title('AUC on CV data')
 plt.show()
 
 #Restoring a pretrained
